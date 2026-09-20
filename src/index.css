@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #1c1917;
+    background-color: #fafaf9;
+  }
+  ::selection {
+    background-color: #1c1917;
+    color: #fafaf9;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-nova-900 text-white font-medium text-sm tracking-wide hover:bg-nova-800 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-nova-900 text-nova-900 font-medium text-sm tracking-wide hover:bg-nova-900 hover:text-white transition-colors duration-200;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-4 py-2 text-nova-700 font-medium text-sm hover:text-nova-900 transition-colors duration-200;
+  }
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
